@@ -1,0 +1,113 @@
+.teams {
+  margin-top: 25px;
+}
+
+.teams h2 {
+  margin-bottom: 20px;
+  color: #203758;
+  font-size: 17px;
+}
+
+.container-team {
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  width: 274px;
+  height: 242px;
+}
+
+.date-teams1 {
+  background: white;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  align-items: center;
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.date-teams2 {
+  background: white;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  align-items: center;
+  padding-left: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.date-teams {
+  background: white;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  padding-left: 20px;
+}
+.team-img {
+  border-radius: 50px;
+  border: 2px solid white;
+  box-shadow: -2px 1px 5px -1px rgba(192, 192, 192, 1);
+}
+.date-teams p {
+  color: #788292;
+  font-size: 13px;
+}
+.date-teams1 p {
+  color: #788292;
+  font-size: 13px;
+  text-align: center;
+  justify-content: center;
+}
+.date-teams2 p {
+  color: #788292;
+  font-size: 13px;
+}
+
+.date-teams p:hover {
+  color: #1877f2;
+}
+.date-teams1 p:hover {
+  color: #1877f2;
+}
+.date-teams2 p:hover {
+  color: #1877f2;
+}
+.team-img:hover {
+  border-radius: 50px;
+  border: 2px solid #1877f2;
+  box-shadow: -2px 1px 5px -1px rgba(192, 192, 192, 1);
+}
+
+.link-team {
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-team:hover .team-img {
+  border-radius: 50px;
+  border: 2px solid #1877f2;
+  box-shadow: -2px 1px 5px -1px rgb(192 192 192);
+}
+
+.date-teams1:hover .team-img {
+  border-radius: 50px;
+  border: 2px solid #1877f2;
+  box-shadow: -2px 1px 5px -1px rgb(192 192 192);
+  transition: 0.5s all;
+}
+.date-teams2:hover .team-img {
+  border-radius: 50px;
+  border: 2px solid #1877f2;
+  box-shadow: -2px 1px 5px -1px rgb(192 192 192);
+  transition: 0.5s all;
+}
+.date-teams:hover .team-img {
+  border-radius: 50px;
+  border: 2px solid #1877f2;
+  box-shadow: -2px 1px 5px -1px rgb(192 192 192);
+  transition: 0.5s all;
+}

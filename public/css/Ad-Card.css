@@ -1,0 +1,127 @@
+.notice-section {
+  width: 363px;
+  height: 232px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40.08px;
+  margin-bottom: 20px;
+}
+.notice-single {
+  width: 176.92px;
+  height: 232px;
+  border-radius: 8px;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 1;
+}
+.notice-article {
+  max-width: 176.92px;
+  height: 175.63px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 18px;
+}
+.notice-article:hover .notice-button {
+  opacity: 1;
+}
+.notice-article1 {
+  background-image: url("../assets/companies/company-bootcampx.jpg");
+}
+.notice-article2 {
+  background-image: url("../assets/companies/company-art.jpg");
+}
+.notice-footer {
+  background-color: white;
+  display: flex;
+  max-width: 176.92px;
+  height: 58px;
+  padding-left: 25px;
+  align-items: center;
+}
+.notice-tittle {
+  font-size: 17px;
+}
+.notice-tittle,
+.notice-text {
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+.notice-text {
+  font-size: 13px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+.notice-button {
+  width: 89.79px;
+  height: 31px;
+  color: #203758;
+  background-color: white;
+  opacity: 0.9;
+  font-weight: 700;
+  font-size: 11px;
+  position: relative;
+  z-index: 3;
+  transition: all 0.25s;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.notice-button:hover {
+  color: #203758;
+  background-color: white;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.notice-article:hover::before {
+  opacity: 1;
+}
+.notice-article::before {
+  width: 176.92px;
+  height: 175.63px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
+  position: absolute;
+  content: "";
+  z-index: 2;
+  display: flex;
+  opacity: 0.7;
+  transition: all 0.25s;
+}
+.avatar {
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 0 0 0 -8px;
+  box-shadow: 0px 1px 5px -1px rgba(192, 192, 192, 1);
+  position: relative;
+}
+.notice-avatars {
+  display: flex;
+}
+.avatar1 {
+  z-index: 3;
+}
+.avatar2 {
+  z-index: 2;
+}
+.avatar3 {
+  z-index: 1;
+}
+.participants-text {
+  font-weight: 500;
+  font-size: 9px;
+  color: #788292;
+  margin-left: 11px;
+}

@@ -1,0 +1,27 @@
+.button-delete {
+  margin-top: 29px;
+  margin-right: 14px;
+  width: 120px;
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  background: #ffffff;
+  border-radius: 8px;
+  border-color: transparent;
+  box-shadow: -2px 2px 8px rgb(0 0 0 / 8%), 2px 2px 8px rgb(0 0 0 / 8%);
+}
+
+.button-delete:hover {
+  cursor: pointer;
+}
+
+.button-delete img {
+  padding: 6px;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
