@@ -1,0 +1,62 @@
+.Follow-P h3 {
+  color: #203758;
+  font-size: 17px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 363px;
+}
+.follow {
+  background-color: white;
+  border-radius: 8px;
+  width: 363px;
+  height: 122px;
+}
+.follow-date {
+  display: flex;
+  justify-content: space-between;
+  border: 1.5px solid #f1f2f6;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 18px;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+  color: #788292;
+  font-size: 13px;
+  align-items: center;
+}
+
+.instructor-profile {
+  max-width: 100%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.follow-1 {
+  background-color: #f0f7ff;
+  color: #1877f2;
+  font-size: 11px;
+  height: 31px;
+  width: 70px;
+  border: none;
+  border-radius: 6px;
+}
+.follow-1:hover {
+  cursor: pointer;
+  background-color: #1877f2;
+  color: #f0f7ff;
+  transition: 0.5s all;
+}
+
+.link-follow {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #788292;
+}

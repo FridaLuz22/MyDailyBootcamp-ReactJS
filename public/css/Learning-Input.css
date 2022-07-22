@@ -1,0 +1,83 @@
+.learning-input {
+  height: 55px;
+  text-align: center;
+  color: #788292;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+  width: 100%;
+}
+
+.logo-link {
+  display: flex;
+  text-decoration: none;
+}
+
+.learning-form {
+  display: flex;
+  width: 622px;
+}
+
+.learning-content:focus-within {
+  background: #ffffff;
+  /* Facebook blue */
+
+  border: 1.5px solid #1877f2;
+  border-radius: 8px;
+}
+.learning-content:focus-within .arrow {
+  stroke: #1877f2;
+}
+
+.learning-content:hover {
+  background: #ffffff;
+  transition: 0.5s all;
+  border: 1.5px solid #1877f2;
+  border-radius: 8px;
+}
+
+.learning-content:hover .arrow {
+  stroke: #1877f2;
+  transition: 0.5s all;
+}
+
+.learning-content {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 55px;
+  max-width: 622px;
+  min-width: 622px;
+  width: 622px;
+  border: 1.5px solid #f1f2f6;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+}
+.learning-button {
+  border: none;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.learning-button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.learning-button:active {
+  background-color: transparent;
+}
+
+.learning-content img {
+  height: 17.91px;
+}

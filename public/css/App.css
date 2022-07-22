@@ -1,0 +1,60 @@
+@import url("./Navbar.css");
+@import url("./reset.css");
+@import url("./Card-Profile.css");
+@import url("./Card-Team.css");
+@import url("./Learning-Input.css");
+@import url("./Card-Stories.css");
+@import url("./Ad-Card.css");
+@import url("./FollowMe.css");
+@import url("./CardPost.css");
+@import url("./Button-Delete.css");
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --solitude: #f1f2f6;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--solitude);
+  font-family: "Montserrat";
+}
+.main {
+  max-width: 1317px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main > div {
+  border-radius: 4px;
+}
+
+.sidebar-right {
+  max-width: 363px;
+}
+
+.sidebar-left {
+  max-width: 274px;
+  position: sticky;
+  height: fit-content;
+  top: 90px;
+}
+
+.sidebar-left,
+.sidebar-right {
+  position: sticky;
+  height: fit-content;
+  top: 90px;
+}
+
+.daily-content {
+  max-width: 622px;
+  margin-left: 29px;
+  margin-right: 29px;
+  margin-bottom: 2em;
+}

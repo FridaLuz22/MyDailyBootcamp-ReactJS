@@ -1,0 +1,114 @@
+.posts-container {
+  width: 100%;
+  height: 100%;
+}
+.public {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 22px;
+  max-width: 622px;
+  margin-top: 28px;
+}
+
+.public-header {
+  width: 100%;
+  display: flex;
+}
+
+.public-date {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 10px;
+  width: 80%;
+}
+
+.link-public {
+  text-decoration: none;
+}
+
+.public-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background-color: white;
+  width: 40px;
+  border: none;
+  margin-top: 5px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.public-button svg {
+  width: 18px;
+}
+.public-button svg:hover ellipse {
+  fill: #1877f2;
+}
+
+.public-button:hover {
+  background-color: #f0f7ff;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.date-conte {
+  display: flex;
+  gap: 5px;
+}
+
+.date-img {
+  border-radius: 50px;
+  border: 2px solid white;
+  box-shadow: -2px 1px 5px -1px rgba(192, 192, 192, 1);
+}
+
+.date-text {
+  padding: 4px;
+}
+
+.date-text h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #203758;
+}
+
+.date-text p {
+  margin: 0;
+  font-size: 11px;
+  color: #788292;
+  padding-top: 4px;
+}
+
+.text {
+  padding-right: 15px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #203758;
+}
+
+.images {
+  display: flex;
+  gap: 12px;
+}
+
+.sub-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons-actions {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  left: 0;
+  width: 20%;
+}
