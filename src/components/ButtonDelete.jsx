@@ -1,6 +1,7 @@
 import React from "react";
 
 function ButtonDelete(){
+  
   return(
     <button className="button-delete visibility-hidden"  data-component="ButtonDelete">
       <svg width="11" height="12" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
