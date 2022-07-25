@@ -37,7 +37,7 @@ function PostCard(){
           cambios, hacer pull request y mergearlo!
         </p>
       </div>
-      <ImageContentThree/>
+      <ImageContentOne/>
     </div>
   )
 }
