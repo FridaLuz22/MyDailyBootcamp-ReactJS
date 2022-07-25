@@ -1,0 +1,10 @@
+.images {
+    display: grid;
+    gap: 12px;
+}
+
+.sub-img {
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+}

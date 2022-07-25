@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonDelete from "./ButtonDelete";
+import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
 function PostCard(){
   return(
     <div className="public">
@@ -36,6 +37,7 @@ function PostCard(){
           cambios, hacer pull request y mergearlo!
         </p>
       </div>
+      <ImageContentThree/>
     </div>
   )
 }
