@@ -7,22 +7,25 @@ import StorieCard from './components/StorieCard';
 import AdCard from './components/AdCard';
 import FollowMe from './components/Follow';
 import PostCard from './components/PostCard';
-import {useState} from 'react'
+
+import {useEffect, useState} from 'react'
 function App() {
   const [ datos , setDatos] = useState({})
-  fetch("https://my-daily-bootcamp.herokuapp.com/users/44.json").then((response)=>{
+  useEffect(()=> {
+    fetch("https://my-daily-bootcamp.herokuapp.com/users/62.json").then((response)=>{
       return response.json()
   }).then((data)=>{
+    console.log("Estos son los datos",data)
     setDatos({...data})
   });
+  },[])
 
   return (
     <>
       <Navbar />
-      {datos.full_name}
       <Main>
         <SidebarLeft>
-          <ProfileCard />
+          <ProfileCard datos={datos}/>
           <TeamCard/>
         </SidebarLeft>
 
