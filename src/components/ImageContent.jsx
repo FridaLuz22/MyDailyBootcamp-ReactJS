@@ -25,7 +25,7 @@ function ImageContentTwo({images}){
 function ImageContentOne({images}){
 
   return(
-    <div class="ImageOf1">
+    <div className="ImageOf1">
       <div className="Image six" style={{backgroundImage: `url(${images[0]})`}}></div>
     </div>
   )

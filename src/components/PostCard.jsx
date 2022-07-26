@@ -1,13 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import ButtonDelete from "./ButtonDelete";
 import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
-function PostCard({data}){
-
-  console.log("el data en el post card",data)
-  let condition = 3
+function PostCard({data,setModalDelete}){
   
-
-
+  const [options, setOptions]=useState(false)
+  let buttonActionsPost=()=>{
+    if(options){
+      setOptions(false)
+    }else{
+      setOptions(true)
+    }
+  }
 
   return(
     <div className="public">
@@ -26,7 +29,7 @@ function PostCard({data}){
           </div>
         </div>
         <div className="buttons-actions">
-          <button className="public-button">
+          <button className="public-button" onClick={buttonActionsPost}>
             <svg width="19" height="5" viewBox="0 0 19 5" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.4">
                 <ellipse cx="2.5" cy="2.90721" rx="2" ry="2.08247" fill="#788292" />
@@ -35,7 +38,8 @@ function PostCard({data}){
               </g>
             </svg>
           </button>
-          <ButtonDelete/> 
+          <ButtonDelete open={options} setModalDelete={setModalDelete} /> 
+
         </div>
       </div>
       <div className="text">
