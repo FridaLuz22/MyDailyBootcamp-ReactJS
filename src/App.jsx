@@ -43,8 +43,8 @@ function App() {
 
         <DailyContent>
           <InputPost/>
-          {posts.map((post)=>{
-            return <PostCard data = {post}/>
+          {posts.map((post, index)=>{
+            return <PostCard data = {post} key={index}/>
           })}
         </DailyContent>
 
