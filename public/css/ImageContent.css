@@ -1,0 +1,67 @@
+.ImageOf3 {
+    overflow: hidden;
+    background: white;
+    width: 574px;
+    height: 239px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [first] 342px [line2] auto [end];
+    grid-template-rows: [first] 115px [end] auto [end];
+}
+.Image{
+    color: white;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.One {
+    grid-area: rojo;
+}
+
+.Two {
+    grid-area: azul;
+    width: 100%;
+    object-fit: contain;
+}
+
+.Three {
+    grid-area: amarillo;
+}
+
+.By-3 {
+    grid-template-areas:
+        "amarillo azul"
+        "amarillo rojo"
+}
+
+.By-2 {
+    grid-template-areas:
+        "azul rojo"
+        "azul rojo"
+}
+
+.By-1 {
+    grid-template-areas:
+        "rojo rojo"
+        "rojo rojo"
+}
+
+.ImageOf2 {
+    overflow: hidden;
+    background: white;
+    width: 574px;
+    height: 239px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [first] auto [line2] auto [end];
+}
+
+.ImageOf1 {
+    overflow: hidden;
+    background: white;
+    width: 574px;
+    height: 239px;
+    display: grid;
+    grid-gap: 10px;
+}
