@@ -1,13 +1,25 @@
 import React from "react";
 import ButtonDelete from "./ButtonDelete";
 import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
+import { compareAsc, format } from 'date-fns';
+
+  format(new Date(2014, 1, 11), 'yyyy-MM-dd')
+//=> '2014-02-11'
+
+const dates = [
+  new Date(1995, 6, 2),
+  new Date(1987, 1, 11),
+  new Date(1989, 6, 10),
+]
+dates.sort(compareAsc)
+//=> [
+//   Wed Feb 11 1987 00:00:00,
+//   Mon Jul 10 1989 00:00:00,
+//   Sun Jul 02 1995 00:00:00
+// ]
+
+
 function PostCard({data}){
-
-  console.log("el data en el post card",data)
-  let condition = 3
-  
-
-
 
   return(
     <div className="public">
@@ -21,7 +33,7 @@ function PostCard({data}){
               <a className="link-public" href="https://twitter.com/yummta?lang=es" target={"_blank"}>
                 <h3>Paul Portillo</h3>
               </a>
-              <p>04 de Julio, 2022</p>
+              <p>{data.created_at.dates}</p>
             </div>
           </div>
         </div>
@@ -40,8 +52,7 @@ function PostCard({data}){
       </div>
       <div className="text">
         <p>
-          Hoy aprendí a usar Git. Aprendi a crear un branch, commitear mis
-          cambios, hacer pull request y mergearlo!
+          {data.description}
         </p>
       </div>
       {/* <ImageContentTwo /> */}

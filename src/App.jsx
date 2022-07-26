@@ -7,8 +7,8 @@ import StorieCard from './components/StorieCard';
 import AdCard from './components/AdCard';
 import FollowMe from './components/Follow';
 import PostCard from './components/PostCard';
-
 import {useEffect, useState} from 'react'
+
 function App() {
   const [ datos , setDatos] = useState({})
   const [ posts , setPosts] = useState([])
