@@ -8,18 +8,15 @@ import AdCard from './components/AdCard';
 import FollowMe from './components/Follow';
 import PostCard from './components/PostCard';
 import {useState} from 'react'
+import ModalDelete from './components/ModalDelete';
+import ModalNewPost from './components/ModalNewPost';
 function App() {
-  const [ datos , setDatos] = useState({})
-  fetch("https://my-daily-bootcamp.herokuapp.com/users/44.json").then((response)=>{
-      return response.json()
-  }).then((data)=>{
-    setDatos({...data})
-  });
-
+  const [modalDelete, setModalDelete]=useState(false)
+  const [modalNewPost, setModalNewPost]=useState(false)
+  
   return (
     <>
       <Navbar />
-      {datos.full_name}
       <Main>
         <SidebarLeft>
           <ProfileCard />
@@ -27,8 +24,8 @@ function App() {
         </SidebarLeft>
 
         <DailyContent>
-          <InputPost/>
-          <PostCard/> 
+          <InputPost setModalNewPost={setModalNewPost}/>
+          <PostCard setModalDelete={setModalDelete}/> 
         </DailyContent>
 
         <SidebarRight>
@@ -37,6 +34,8 @@ function App() {
           <FollowMe/>
         </SidebarRight>
       </Main>
+      <ModalDelete openModalDelete={modalDelete} setModalDelete={setModalDelete}/>
+      <ModalNewPost openModalNewPost ={modalNewPost} setModalNewPost={setModalNewPost} />
     </>
   )
 }

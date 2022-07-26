@@ -1,8 +1,11 @@
 import React from 'react';
 
-function InputPost(){
+function InputPost({setModalNewPost}){
+  let inputNewPost=()=>{
+    setModalNewPost(true)
+  }
   return(
-    <div className="learning-content" data-component="FormInput">
+    <div className="learning-content" onClick={inputNewPost}>
       <form className="learning-form">
         <input type="text" className="learning-input" placeholder="What did you learn today Paul?"/>
         <button className="learning-button" type="button">
