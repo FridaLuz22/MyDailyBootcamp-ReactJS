@@ -7,8 +7,8 @@ function ProfileCard({datos}){
       <h3>{datos.full_name}</h3>
       <span>{datos.title}</span>
       <div className="buttons">
-        <a href="https://twitter.com/yummta?lang=es" target={"_blank"} className="profile-c"><b>@yummta</b></a>
-        <a href="https://www.linkedin.com/in/yummta/" target={"_blank"} className="profile-c"><b>LinkedIn</b></a>
+        <a href={datos.twitter_url} target={"_blank"} className="profile-c"><b>@yummta</b></a>
+        <a href={datos.linkedin_url} target={"_blank"} className="profile-c"><b>LinkedIn</b></a>
       </div>
     </div>
   )

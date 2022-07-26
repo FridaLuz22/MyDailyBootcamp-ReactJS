@@ -11,13 +11,25 @@ import PostCard from './components/PostCard';
 import {useEffect, useState} from 'react'
 function App() {
   const [ datos , setDatos] = useState({})
+  const [ posts , setPosts] = useState([])
   useEffect(()=> {
+
     fetch("https://my-daily-bootcamp.herokuapp.com/users/62.json").then((response)=>{
       return response.json()
-  }).then((data)=>{
-    console.log("Estos son los datos",data)
+  }).then((data)=>{ 
     setDatos({...data})
   });
+
+    fetch("https://my-daily-bootcamp.herokuapp.com/posts.json").then((response)=>{
+      return response.json()
+    }).then((data)=>{
+      setPosts([...data])
+      console.log("akjlsjdklajdskl",posts)
+    })
+
+
+
+
   },[])
 
   return (
@@ -31,7 +43,9 @@ function App() {
 
         <DailyContent>
           <InputPost/>
-          <PostCard/> 
+          {posts.map((post)=>{
+            return <PostCard data = {post}/>
+          })}
         </DailyContent>
 
         <SidebarRight>

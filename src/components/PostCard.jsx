@@ -1,7 +1,14 @@
 import React from "react";
 import ButtonDelete from "./ButtonDelete";
 import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
-function PostCard(){
+function PostCard({data}){
+
+  console.log("el data en el post card",data)
+  let condition = 3
+  
+
+
+
   return(
     <div className="public">
       <div className="public-header">
@@ -37,7 +44,8 @@ function PostCard(){
           cambios, hacer pull request y mergearlo!
         </p>
       </div>
-      <ImageContentOne/>
+      {/* <ImageContentTwo /> */}
+      {data.images.length === 3 ? <ImageContentThree images={data.images}/> : data.images.length===2 ? <ImageContentTwo images={data.images}/>  : data.images.length===1 ? <ImageContentOne images={data.images}/> : null} 
     </div>
   )
 }
