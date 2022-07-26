@@ -10,6 +10,7 @@
 @import url("./Button-Delete.css");
 @import url("./Modal-Delete.css");
 @import url("./Modal-New-post.css");
+@import url("./ImageContent.css");
 ::after,
 ::before {
   box-sizing: border-box;

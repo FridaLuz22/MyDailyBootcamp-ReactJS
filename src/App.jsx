@@ -7,25 +7,44 @@ import StorieCard from './components/StorieCard';
 import AdCard from './components/AdCard';
 import FollowMe from './components/Follow';
 import PostCard from './components/PostCard';
-import {useState} from 'react'
 import ModalDelete from './components/ModalDelete';
 import ModalNewPost from './components/ModalNewPost';
+import {useEffect, useState} from 'react'
 function App() {
   const [modalDelete, setModalDelete]=useState(false)
   const [modalNewPost, setModalNewPost]=useState(false)
   
+  const [ datos , setDatos] = useState({})
+  const [ posts , setPosts] = useState([])
+  
+  useEffect(()=> {
+    fetch("https://my-daily-bootcamp.herokuapp.com/users/62.json").then((response)=>{
+      return response.json()
+  }).then((data)=>{ 
+    setDatos({...data})
+  });
+    fetch("https://my-daily-bootcamp.herokuapp.com/posts.json").then((response)=>{
+      return response.json()
+    }).then((data)=>{
+      setPosts([...data])
+      console.log(posts)
+    })
+  },[])
+
   return (
     <>
       <Navbar />
       <Main>
         <SidebarLeft>
-          <ProfileCard />
+          <ProfileCard datos={datos}/>
           <TeamCard/>
         </SidebarLeft>
 
         <DailyContent>
           <InputPost setModalNewPost={setModalNewPost}/>
-          <PostCard setModalDelete={setModalDelete}/> 
+          {posts.map((post,index)=>{
+            return <PostCard data = {post} setModalDelete={setModalDelete} key={index}/>
+          })}
         </DailyContent>
 
         <SidebarRight>

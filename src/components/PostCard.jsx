@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import ButtonDelete from "./ButtonDelete";
-function PostCard({setModalDelete}){
+import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
+function PostCard({data,setModalDelete}){
   
   const [options, setOptions]=useState(false)
   let buttonActionsPost=()=>{
@@ -10,7 +11,7 @@ function PostCard({setModalDelete}){
       setOptions(true)
     }
   }
-  
+
   return(
     <div className="public">
       <div className="public-header">
@@ -47,6 +48,8 @@ function PostCard({setModalDelete}){
           cambios, hacer pull request y mergearlo!
         </p>
       </div>
+      {/* <ImageContentTwo /> */}
+      {data.images.length === 3 ? <ImageContentThree images={data.images}/> : data.images.length===2 ? <ImageContentTwo images={data.images}/>  : data.images.length===1 ? <ImageContentOne images={data.images}/> : null} 
     </div>
   )
 }
