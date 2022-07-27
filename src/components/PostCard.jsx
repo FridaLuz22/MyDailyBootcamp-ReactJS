@@ -1,27 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
 import ButtonDelete from "./ButtonDelete";
 import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
 import { compareAsc, format } from 'date-fns';
 import { de } from "date-fns/locale";
 
-//   format(new Date(2014, 1, 11), 'yyyy-MM-dd')
-// //=> '2014-02-11'
-
-// const dates = [
-//   new Date(1995, 6, 2),
-//   new Date(1987, 1, 11),
-//   new Date(1989, 6, 10),
-// ]
-// dates.sort(compareAsc)
-// //=> [
-// //   Wed Feb 11 1987 00:00:00,
-// //   Mon Jul 10 1989 00:00:00,
-// //   Sun Jul 02 1995 00:00:00
-// // ]
-
-
-function PostCard({data}){
-
+function PostCard({data,setModalDelete}){
+  
+  const [options, setOptions]=useState(false)
+  let buttonActionsPost=()=>{
+    if(options){
+      setOptions(false)
+    }else{
+      setOptions(true)
+    }
+  }
+  
   return(
     <div className="public">
       <div className="public-header">
@@ -40,7 +33,7 @@ function PostCard({data}){
           </div>
         </div>
         <div className="buttons-actions">
-          <button className="public-button">
+          <button className="public-button" onClick={buttonActionsPost}>
             <svg width="19" height="5" viewBox="0 0 19 5" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.4">
                 <ellipse cx="2.5" cy="2.90721" rx="2" ry="2.08247" fill="#788292" />
@@ -49,7 +42,7 @@ function PostCard({data}){
               </g>
             </svg>
           </button>
-          <ButtonDelete/> 
+          <ButtonDelete open={options} setModalDelete={setModalDelete} /> 
         </div>
       </div>
       <div className="text">

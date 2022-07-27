@@ -18,10 +18,11 @@
   cursor: pointer;
 }
 
-.button-delete img {
+.button-delete svg {
   padding: 6px;
 }
 
 .visibility-hidden {
   visibility: hidden;
 }
+
