@@ -14,7 +14,6 @@
   flex-direction: column;
   row-gap: 2px;
   width: 274px;
-  height: 242px;
 }
 
 .date-teams1 {
@@ -24,30 +23,15 @@
   height: 60px;
   align-items: center;
   padding-left: 20px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
+  margin: 2px;
 }
-.date-teams2 {
-  background: white;
-  display: flex;
-  gap: 20px;
-  height: 60px;
-  align-items: center;
-  padding-left: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.date-teams {
-  background: white;
-  display: flex;
-  height: 60px;
-  align-items: center;
-  padding-left: 20px;
-}
+
 .team-img {
   border-radius: 50px;
   border: 2px solid white;
   box-shadow: -2px 1px 5px -1px rgba(192, 192, 192, 1);
+  width: 30px;
 }
 .date-teams p {
   color: #788292;
