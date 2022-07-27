@@ -3,8 +3,9 @@ import ButtonDelete from "./ButtonDelete";
 import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
 import { compareAsc, format } from 'date-fns';
 import { de } from "date-fns/locale";
+import StorieCard from "./StorieCard";
 
-function PostCard({data,setModalDelete}){
+function PostCard({data,setModalDelete,team}){
   
   const [options, setOptions]=useState(false)
   let buttonActionsPost=()=>{
@@ -25,7 +26,7 @@ function PostCard({data,setModalDelete}){
             </a>
             <div className="date-text">
               <a className="link-public" href="https://twitter.com/yummta?lang=es" target={"_blank"}>
-                <h3>Paul Portillo</h3>
+                <h3>{data.author.full_name}</h3>
               </a>
               <p>{format(new Date(data.created_at), "dd 'de' MMMM, yyyy")}</p>
 

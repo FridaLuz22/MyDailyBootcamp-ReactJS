@@ -18,13 +18,15 @@ function App() {
   const [ datos , setDatos] = useState({})
   const [ posts , setPosts] = useState([])
   const [ teams , setTeams] = useState([])
+  const [ stories, setStories] = useState([])
   
   useEffect(()=> {
-    fetch("https://my-daily-bootcamp.herokuapp.com/users/62.json").then((response)=>{
+    fetch("https://my-daily-bootcamp.herokuapp.com/users/4.json").then((response)=>{
       return response.json()
   }).then((data)=>{ 
     setDatos({...data})
   });
+  
     fetch("https://my-daily-bootcamp.herokuapp.com/posts.json").then((response)=>{
       return response.json()
   }).then((data)=>{
@@ -37,7 +39,11 @@ function App() {
     setTeams([...team])
   });
 
-
+    fetch("https://my-daily-bootcamp.herokuapp.com/users.json").then((response)=>{
+      return response.json()
+  }).then((storie)=>{ 
+    setStories(storie)
+  });
 
   },[])
 
@@ -63,7 +69,16 @@ function App() {
         </DailyContent>
 
         <SidebarRight>
-          <StorieCard/>
+        <div className="stories">
+          <h2 className="tittle-stories">Stories</h2>
+          <ul className="stories-sqare">
+            <a className="link-stories" href="#"> </a>
+          {stories.map((storie,index)=>{
+            return <StorieCard storie={storie} key={index} daya={false}/>
+          })}
+          </ul>
+        </div>
+
           <AdCard/>
           <FollowMe/>
         </SidebarRight>
