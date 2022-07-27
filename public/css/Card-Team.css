@@ -48,6 +48,7 @@
   border-radius: 50px;
   border: 2px solid white;
   box-shadow: -2px 1px 5px -1px rgba(192, 192, 192, 1);
+  width: 30px;
 }
 .date-teams p {
   color: #788292;

@@ -17,6 +17,7 @@ function App() {
   
   const [ datos , setDatos] = useState({})
   const [ posts , setPosts] = useState([])
+  const [ teams , setTeams] = useState([])
   
   useEffect(()=> {
     fetch("https://my-daily-bootcamp.herokuapp.com/users/62.json").then((response)=>{
@@ -26,10 +27,18 @@ function App() {
   });
     fetch("https://my-daily-bootcamp.herokuapp.com/posts.json").then((response)=>{
       return response.json()
-    }).then((data)=>{
+  }).then((data)=>{
       setPosts([...data])
-      console.log(posts)
-    })
+  })
+
+    fetch("https://my-daily-bootcamp.herokuapp.com/users.json").then((response)=>{
+      return response.json()
+  }).then((team)=>{ 
+    setTeams([...team])
+  });
+
+
+
   },[])
 
   return (
@@ -38,7 +47,12 @@ function App() {
       <Main>
         <SidebarLeft>
           <ProfileCard datos={datos}/>
-          <TeamCard/>
+          <div className="teams">
+            <h2>My team</h2>
+          {teams.map((team,index)=>{
+            return <TeamCard team={team} key={index}/>
+          })}
+          </div>
         </SidebarLeft>
 
         <DailyContent>

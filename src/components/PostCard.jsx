@@ -50,7 +50,6 @@ function PostCard({data,setModalDelete}){
           {data.description}
         </p>
       </div>
-      {/* <ImageContentTwo /> */}
       {data.images.length === 3 ? <ImageContentThree images={data.images}/> : data.images.length===2 ? <ImageContentTwo images={data.images}/>  : data.images.length===1 ? <ImageContentOne images={data.images}/> : null} 
     </div>
   )
