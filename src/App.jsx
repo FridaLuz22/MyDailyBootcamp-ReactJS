@@ -10,6 +10,7 @@ import PostCard from './components/PostCard';
 import ModalDelete from './components/ModalDelete';
 import ModalNewPost from './components/ModalNewPost';
 import {useEffect, useState} from 'react'
+
 function App() {
   const [modalDelete, setModalDelete]=useState(false)
   const [modalNewPost, setModalNewPost]=useState(false)

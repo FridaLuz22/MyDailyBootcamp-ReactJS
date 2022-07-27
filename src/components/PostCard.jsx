@@ -1,6 +1,9 @@
 import React,{useState} from "react";
 import ButtonDelete from "./ButtonDelete";
 import {ImageContentOne, ImageContentTwo, ImageContentThree} from "./ImageContent";
+import { compareAsc, format } from 'date-fns';
+import { de } from "date-fns/locale";
+
 function PostCard({data,setModalDelete}){
   
   const [options, setOptions]=useState(false)
@@ -11,7 +14,7 @@ function PostCard({data,setModalDelete}){
       setOptions(true)
     }
   }
-
+  
   return(
     <div className="public">
       <div className="public-header">
@@ -24,7 +27,8 @@ function PostCard({data,setModalDelete}){
               <a className="link-public" href="https://twitter.com/yummta?lang=es" target={"_blank"}>
                 <h3>Paul Portillo</h3>
               </a>
-              <p>04 de Julio, 2022</p>
+              <p>{format(new Date(data.created_at), "dd 'de' MMMM, yyyy")}</p>
+
             </div>
           </div>
         </div>
@@ -39,13 +43,11 @@ function PostCard({data,setModalDelete}){
             </svg>
           </button>
           <ButtonDelete open={options} setModalDelete={setModalDelete} /> 
-
         </div>
       </div>
       <div className="text">
         <p>
-          Hoy aprendí a usar Git. Aprendi a crear un branch, commitear mis
-          cambios, hacer pull request y mergearlo!
+          {data.description}
         </p>
       </div>
       {/* <ImageContentTwo /> */}
