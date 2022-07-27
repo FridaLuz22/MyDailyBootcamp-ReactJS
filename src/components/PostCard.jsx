@@ -22,7 +22,7 @@ function PostCard({data,setModalDelete,team}){
         <div className="public-date">
           <div className="date-conte">
             <a className="link-public" href="https://twitter.com/yummta?lang=es" target={"_blank"}>
-              <img className="date-img" src="assets/profile.jpg" alt="Foto de perfil del usuario" />
+              <img className="date-img" src={data.author.profile_url} alt="Foto de perfil del usuario" />
             </a>
             <div className="date-text">
               <a className="link-public" href="https://twitter.com/yummta?lang=es" target={"_blank"}>
